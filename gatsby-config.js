@@ -12,12 +12,12 @@ module.exports = {
     title: `Jason A. Wise`,
     author: {
       name: `Jason A. Wise`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: ``,
+    siteUrl: `https://jasonawise.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `codewithjason`,
     },
   },
   plugins: [
