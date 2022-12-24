@@ -5,6 +5,10 @@
 @layer base {
   body {
     @apply bg-white text-gray-900;
+    font-family: 'Hanken Grotesk'
+  }
+  p {
+    font-family: 'Open Sans'
   }
   h1 {
     @apply text-3xl font-extrabold mb-4;
