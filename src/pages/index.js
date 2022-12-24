@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small className="font-light mr-3">{post.frontmatter.date}</small>
                   {post.frontmatter.tags?.map((tag) => {
-                    return <Link to={`/tags/${tag}`} className="tag mr-2">{tag}</Link>
+                    return <Link to={`/tags/${tag}`} className="tag mr-2 border rounded-xl px-2 py-1 text-sm font-light hover:bg-slate-900 hover:text-white">{tag}</Link>
                   })}
                 </header>
                 <section>
