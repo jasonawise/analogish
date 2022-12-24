@@ -18,6 +18,7 @@ module.exports = {
     siteUrl: `https://jasonawise.com/`,
     social: {
       twitter: `codewithjason`,
+      mastodon: `@jasonwise@mstdn.social`
     },
   },
   plugins: [
