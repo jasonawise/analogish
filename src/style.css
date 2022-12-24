@@ -16,11 +16,5 @@
   h2 {
     @apply text-2xl font-bold;
   }
-  p {
-    @apply mb-3
-  }
 
-  article {
-    @apply mb-2;
-  }
 }
