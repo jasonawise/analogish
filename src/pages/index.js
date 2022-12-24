@@ -38,10 +38,7 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small className="font-light mr-3">{post.frontmatter.date}</small>
-                  {post.frontmatter.tags?.map((tag) => {
-                    return <Link to={`/tags/${tag}`} className="tag mr-2 border rounded-xl px-2 py-1 text-sm font-light hover:bg-slate-900 hover:text-white">{tag}</Link>
-                  })}
+                    <small className="font-light">{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -52,6 +49,10 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
+              {post.frontmatter.tags?.map((tag) => {
+                    return <Link to={`/tags/${tag}`} className="tag mr-2 border rounded-xl px-2 py-1 text-sm font-light hover:bg-slate-900 hover:text-white">{tag}</Link>
+                  })}
+              <hr className="my-4" />
             </li>
           )
         })}
