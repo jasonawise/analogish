@@ -38,7 +38,10 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small className="font-light">{post.frontmatter.date}</small>
+                  <small className="font-light mr-3">{post.frontmatter.date}</small>
+                  {post.frontmatter.tags?.map((tag) => {
+                    return <Link to={`/tags/${tag}`} className="tag mr-2">{tag}</Link>
+                  })}
                 </header>
                 <section>
                   <p
@@ -83,6 +86,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }
