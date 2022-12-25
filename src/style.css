@@ -11,7 +11,7 @@
     font-family: 'Open Sans'
   }
   h1 {
-    @apply text-3xl font-extrabold mb-4;
+    @apply text-3xl font-extrabold;
   }
   h2 {
     @apply text-2xl font-bold;

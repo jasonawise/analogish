@@ -14,7 +14,7 @@ module.exports = {
       name: `Jason A. Wise`,
       summary: ``,
     },
-    description: ``,
+    description: `Where the world of analog and digital meet.`,
     siteUrl: `https://analoghish.net`,
     social: {
       twitter: `codewithjason`,
