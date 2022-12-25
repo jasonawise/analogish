@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Jason A. Wise`,
+    title: `Analog-ish`,
     author: {
       name: `Jason A. Wise`,
       summary: ``,
     },
     description: ``,
-    siteUrl: `https://jasonawise.com/`,
+    siteUrl: `https://analoghish.net`,
     social: {
       twitter: `codewithjason`,
       mastodon: `@jasonwise@mstdn.social`
