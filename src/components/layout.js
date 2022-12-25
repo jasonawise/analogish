@@ -1,16 +1,19 @@
 import { Link } from "gatsby"
 import * as React from "react"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, description }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
 
   if (isRootPath) {
     header = (
-      <h1 className="">
-        <Link to="/">{title}</Link>
-      </h1>
+      <div>
+        <h1 className="">
+          <Link to="/">{title}</Link>
+        </h1>
+        <p className="text-xs font-extralight italic">{description}</p>
+      </div>
     )
   } else {
     header = (
