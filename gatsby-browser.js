@@ -1,4 +1,3 @@
-
 // normalize CSS across browsers
 // custom CSS styles
 import "./src/style.css"

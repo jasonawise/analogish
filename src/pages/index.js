@@ -7,11 +7,16 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const stieDescription = data.site.siteMetadata?.description || `Description`
+  const navItems = data.site.siteMetadata?.navigationItems || []
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle} description={stieDescription}>
+      <Layout
+        location={location}
+        title={siteTitle}
+        description={stieDescription}
+      >
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -22,17 +27,19 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle} description={stieDescription}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      description={stieDescription}
+      navItems={navItems}
+    >
       <ol>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
             <li key={post.fields.slug}>
-              <article
-                itemScope
-                itemType="http://schema.org/Article"
-              >
+              <article itemScope itemType="http://schema.org/Article">
                 <header>
                   <h2 className="underline">
                     <Link to={post.fields.slug} itemProp="url">
