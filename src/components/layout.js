@@ -1,31 +1,13 @@
-import { Link } from "gatsby"
 import * as React from "react"
+import Nav from "./nav"
 
-const Layout = ({ location, title, children, description }) => {
+const Layout = ({ location, title, children, description, navItems }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
-
-  if (isRootPath) {
-    header = (
-      <div>
-        <h1 className="">
-          <Link to="/">{title}</Link>
-        </h1>
-        <p className="text-xs font-extralight italic">{description}</p>
-      </div>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+  const isRootPath = location?.pathname === rootPath
 
   return (
-    <div className="p-6" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+    <div className="p-6">
+      <Nav title={title} description={description} navItems={navItems} />
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
