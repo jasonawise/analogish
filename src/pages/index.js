@@ -46,7 +46,7 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small className="font-light">{post.frontmatter.date}</small>
+                    <small className="font-light">{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -57,6 +57,15 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
+              <div className="mb-4">
+                <Link to={post.fields.slug} itemProp="url">
+                  <span itemProp="headline" className="font-extralight text-gray-4">read more...</span>
+                </Link>
+              </div>
+              {post.frontmatter.tags?.map((tag) => {
+                    return <Link to={`/tags/${tag}`} className="tag mr-2 border rounded-xl px-2 py-1 text-sm font-light hover:bg-slate-900 hover:text-white">{tag}</Link>
+                  })}
+              <hr className="my-4" />
             </li>
           )
         })}
@@ -64,6 +73,7 @@ const BlogIndex = ({ data, location }) => {
     </Layout>
   )
 }
+
 
 export default BlogIndex
 
@@ -92,6 +102,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }
