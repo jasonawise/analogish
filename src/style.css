@@ -23,4 +23,8 @@
   article {
     @apply mb-6;
   }
+
+  li > p > a {
+    @apply underline hover:font-bold hover:text-gray-900 text-gray-700;
+  }
 }

@@ -15,10 +15,11 @@ Next is my 2020 M1 Macbook air. This is where I do my programming at, whether us
 
 I also have a Kindle ereader where I spend most of the rest of my time reading digital books. 
 
-### Apps Currently Using
-[Obsidian](https://obsidian.md)
-[Drafts](https://getdrafts.com)
-[Day One](https://dayoneapp.com)
-[VS Code](https://code.visualstudio.com/)
-[Doom Emacs](https://github.com/doomemacs/doomemacs)
+## Apps Currently Using
+- [Obsidian](https://obsidian.md)
+- [Drafts](https://getdrafts.com)
+- [Day One](https://dayoneapp.com)
+- [VS Code](https://code.visualstudio.com/)
+- [Doom Emacs](https://github.com/doomemacs/doomemacs)
 
+ 
